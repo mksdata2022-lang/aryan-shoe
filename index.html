@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aryan Shoe – Footwear Shop, Balasore | ଆର୍ୟ୍ୟାନ୍ ସୁ</title>
+<meta name="description" content="Aryan Shoe, Balasore, Odisha – men’s, kids’, sports, formal shoes, sandals and slippers. Browse our catalogue and enquire on WhatsApp.">
+<style>
+:root{--blue:#2874f0;--dark:#172337;--bg:#f1f3f6;--card:#fff;--text:#212121;--muted:#6b7280;--green:#388e3c;--wa:#25d366;--line:#e5e7eb}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Oriya",sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+header{background:var(--blue);color:#fff;padding:10px 14px;position:sticky;top:0;z-index:10}
+.top{display:flex;align-items:center;justify-content:space-between;gap:8px;max-width:1200px;margin:auto}
+.brand{font-size:1.25rem;font-weight:700}.brand small{display:block;font-size:.75rem;font-weight:400;opacity:.9}
+.call{color:#fff;text-decoration:none;font-size:.85rem;border:1px solid #fff8;padding:6px 10px;border-radius:4px;white-space:nowrap}
+.search{max-width:1200px;margin:8px auto 0}
+.search input{width:100%;padding:11px 14px;border:0;border-radius:4px;font-size:1rem}
+.wrap{max-width:1200px;margin:auto;padding:10px}
+.cats{display:flex;gap:8px;overflow-x:auto;padding:4px 0 8px;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:7px 14px;font-size:.85rem;cursor:pointer;text-align:center;color:var(--text)}
+.chip small{display:block;font-size:.7rem;color:var(--muted)}
+.chip.on{background:var(--blue);color:#fff;border-color:var(--blue)}.chip.on small{color:#e0ebff}
+.filters{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:6px 0 10px}
+.filters label{font-size:.72rem;color:var(--muted);display:block}
+.filters select{width:100%;padding:8px;border:1px solid var(--line);border-radius:4px;background:#fff;font-size:.9rem}
+.count{font-size:.85rem;color:var(--muted);margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.card{background:var(--card);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 3px #0001}
+.pic{aspect-ratio:1/1;background:#f7f7f7;position:relative}
+.pic img,.pic svg{width:100%;height:100%;object-fit:cover;display:block}
+.badge{position:absolute;top:8px;left:8px;background:var(--green);color:#fff;font-size:.72rem;font-weight:700;padding:3px 7px;border-radius:3px}
+.info{padding:10px;display:flex;flex-direction:column;gap:4px;flex:1}
+.name{font-size:.9rem;font-weight:600}
+.cat{font-size:.72rem;color:var(--muted)}
+.price{font-size:1.05rem;font-weight:700}.price s{font-size:.8rem;color:var(--muted);font-weight:400;margin:0 4px}.price em{font-style:normal;font-size:.8rem;color:var(--green);font-weight:600}
+.meta{font-size:.78rem;color:#444}
+.dots{display:flex;gap:4px;flex-wrap:wrap}
+.tag{border:1px solid var(--line);border-radius:3px;padding:1px 6px;font-size:.72rem}
+.wa{margin-top:auto;display:block;text-align:center;background:var(--wa);color:#fff;text-decoration:none;font-weight:600;font-size:.85rem;padding:9px 6px;border-radius:4px}
+.wa small{display:block;font-weight:400;font-size:.7rem}
+.empty{grid-column:1/-1;text-align:center;padding:40px 10px;color:var(--muted);background:#fff;border-radius:6px}
+footer{background:var(--dark);color:#cbd5e1;margin-top:20px;padding:20px 14px;font-size:.9rem}
+footer .in{max-width:1200px;margin:auto;display:grid;gap:14px}
+footer h3{color:#fff;font-size:1rem;margin-bottom:4px}
+footer a{color:#8ab4ff}
+.btn{display:inline-block;margin-top:8px;background:var(--blue);color:#fff!important;text-decoration:none;padding:9px 14px;border-radius:4px}
+.note{font-size:.75rem;opacity:.8}
+.float{position:fixed;right:14px;bottom:14px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;padding:12px 16px;border-radius:30px;box-shadow:0 3px 10px #0004;font-size:.9rem}
+@media(min-width:600px){.grid{grid-template-columns:repeat(3,1fr)}.filters{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr)}footer .in{grid-template-columns:2fr 1fr 1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <div class="brand">👟 Aryan Shoe<small>ଆର୍ୟ୍ୟାନ୍ ସୁ · Balasore / ବାଲେଶ୍ୱର</small></div>
+    <a class="call" id="callBtn" href="#">📞 Call / କଲ୍</a>
+  </div>
+  <div class="search"><input id="q" type="search" placeholder="Search shoes… / ଜୋତା ଖୋଜନ୍ତୁ…" aria-label="Search"></div>
+</header>
+
+<main class="wrap">
+  <div class="cats" id="cats"></div>
+
+  <div class="filters">
+    <div><label>Colour / ରଙ୍ଗ</label><select id="fColor"></select></div>
+    <div><label>Size / ସାଇଜ୍</label><select id="fSize"></select></div>
+    <div><label>Price / ମୂଲ୍ୟ</label>
+      <select id="fPrice">
+        <option value="0">Any / ଯେକୌଣସି</option>
+        <option value="500">Under ₹500</option>
+        <option value="1000">Under ₹1000</option>
+        <option value="1500">Under ₹1500</option>
+        <option value="2000">Under ₹2000</option>
+      </select></div>
+    <div><label>Sort / କ୍ରମ</label>
+      <select id="fSort">
+        <option value="def">Featured</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="disc">Biggest Discount</option>
+      </select></div>
+  </div>
+
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>
+  <div class="in">
+    <div>
+      <h3>📍 Visit our shop / ଆମ ଦୋକାନ</h3>
+      <div id="addr"></div>
+      <div id="addrOr" style="margin-top:4px"></div>
+      <a class="btn" id="mapBtn" target="_blank" rel="noopener" href="#">Open in Google Maps / ମାନଚିତ୍ର</a>
+    </div>
+    <div>
+      <h3>🕒 Timings / ସମୟ</h3>
+      <div id="hours"></div>
+    </div>
+    <div>
+      <h3>💬 Enquiry / ପଚାରନ୍ତୁ</h3>
+      <div>WhatsApp / Call:<br><a id="phoneLink" href="#"></a></div>
+      <p class="note" style="margin-top:8px">Catalogue only. Prices and stock may change – please confirm on WhatsApp. No online payment or delivery.<br>କେବଳ ତାଲିକା। ମୂଲ୍ୟ ଓ ଷ୍ଟକ୍ ବଦଳିପାରେ – WhatsApp ରେ ନିଶ୍ଚିତ କରନ୍ତୁ।</p>
+    </div>
+  </div>
+</footer>
+
+<a class="float" id="floatWa" target="_blank" rel="noopener" href="#">💬 WhatsApp</a>
+
+<script src="products.js"></script>
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id)};
+  var state = {cat:"all"};
+  var COLORS = {black:"#222",white:"#f2f2f2",grey:"#9aa0a6",gray:"#9aa0a6",blue:"#2874f0",red:"#d93025",green:"#2e9e4f",brown:"#7b4a25",pink:"#f06292",gold:"#d4a017",yellow:"#f4c20d",orange:"#f57c00"};
+  var esc = function(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+  var inr = function(n){return "₹" + Number(n).toLocaleString("en-IN")};
+  var catById = {}; CATEGORIES.forEach(function(c){catById[c.id]=c});
+  var waBase = "https://wa.me/" + SHOP.whatsapp;
+
+  // Shop info
+  $("addr").textContent = SHOP.address;
+  $("addrOr").textContent = SHOP.addressOdia;
+  $("hours").textContent = SHOP.hours;
+  $("mapBtn").href = SHOP.mapsLink;
+  $("callBtn").href = "tel:+" + SHOP.whatsapp;
+  $("phoneLink").href = "tel:+" + SHOP.whatsapp;
+  $("phoneLink").textContent = SHOP.phoneDisplay;
+  $("floatWa").href = waBase + "?text=" + encodeURIComponent("Hello Aryan Shoe, I have an enquiry. / ନମସ୍କାର, ମୋର ଗୋଟିଏ ପ୍ରଶ୍ନ ଅଛି।");
+
+  // Category chips
+  function renderCats(){
+    var all = [{id:"all",en:"All",or:"ସବୁ"}].concat(CATEGORIES);
+    $("cats").innerHTML = all.map(function(c){
+      return '<button class="chip'+(state.cat===c.id?' on':'')+'" data-c="'+c.id+'">'+esc(c.en)+'<small>'+esc(c.or)+'</small></button>';
+    }).join("");
+  }
+  $("cats").addEventListener("click",function(e){
+    var b = e.target.closest(".chip"); if(!b) return;
+    state.cat = b.dataset.c; renderCats(); render();
+  });
+
+  // Filter dropdowns built from product data
+  var colors = [], sizes = [];
+  PRODUCTS.forEach(function(p){
+    p.colors.forEach(function(c){if(colors.indexOf(c)<0)colors.push(c)});
+    p.sizes.forEach(function(s){if(sizes.indexOf(s)<0)sizes.push(s)});
+  });
+  sizes.sort(function(a,b){return a-b});
+  $("fColor").innerHTML = '<option value="">All / ସବୁ</option>' + colors.map(function(c){return '<option>'+esc(c)+'</option>'}).join("");
+  $("fSize").innerHTML  = '<option value="">All / ସବୁ</option>' + sizes.map(function(s){return '<option>'+s+'</option>'}).join("");
+
+  // Placeholder picture (used when a product has no photo)
+  function placeholder(p){
+    var col = COLORS[(p.colors[0]||"").toLowerCase()] || "#2874f0";
+    return '<svg viewBox="0 0 200 200" role="img" aria-label="'+esc(p.name)+'"><rect width="200" height="200" fill="#f3f4f6"/>'
+      + '<path d="M30 130 Q30 90 60 85 L80 85 Q95 100 120 100 L150 100 Q175 105 175 130 L175 145 L30 145 Z" fill="'+col+'"/>'
+      + '<rect x="30" y="145" width="145" height="12" rx="6" fill="#444"/>'
+      + '<path d="M85 88 L95 100 M100 92 L108 102" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>';
+  }
+
+  function disc(p){return p.mrp>p.price ? Math.round((p.mrp-p.price)*100/p.mrp) : 0}
+
+  function render(){
+    var q = $("q").value.trim().toLowerCase();
+    var col = $("fColor").value, size = $("fSize").value;
+    var max = Number($("fPrice").value), sort = $("fSort").value;
+
+    var list = PRODUCTS.filter(function(p){
+      if(state.cat!=="all" && p.category!==state.cat) return false;
+      if(col && p.colors.indexOf(col)<0) return false;
+      if(size && p.sizes.indexOf(Number(size))<0) return false;
+      if(max && p.price>max) return false;
+      if(q){
+        var c = catById[p.category]||{en:"",or:""};
+        var hay = (p.name+" "+p.colors.join(" ")+" "+c.en+" "+c.or).toLowerCase();
+        if(hay.indexOf(q)<0) return false;
+      }
+      return true;
+    });
+    if(sort==="low") list.sort(function(a,b){return a.price-b.price});
+    if(sort==="high") list.sort(function(a,b){return b.price-a.price});
+    if(sort==="disc") list.sort(function(a,b){return disc(b)-disc(a)});
+
+    $("count").textContent = list.length + " product" + (list.length===1?"":"s") + " / " + list.length + " ଟି ଜୋତା";
+
+    if(!list.length){
+      $("grid").innerHTML = '<div class="empty">No products found. Try changing filters.<br>କିଛି ମିଳିଲା ନାହିଁ। ଫିଲ୍ଟର୍ ବଦଳାନ୍ତୁ।</div>';
+      return;
+    }
+    $("grid").innerHTML = list.map(function(p){
+      var d = disc(p), c = catById[p.category]||{en:"",or:""};
+      var pic = p.img ? '<img loading="lazy" src="'+esc(p.img)+'" alt="'+esc(p.name)+'">' : placeholder(p);
+      var msg = "Hello Aryan Shoe, I am interested in: "+p.name+" ("+inr(p.price)+"). Is it available? / ନମସ୍କାର, ମୁଁ ଏହି ଜୋତା ବିଷୟରେ ପଚାରୁଛି: "+p.name;
+      return '<article class="card"><div class="pic">'+pic+(d?'<span class="badge">'+d+'% OFF</span>':'')+'</div>'
+        + '<div class="info"><div class="name">'+esc(p.name)+'</div>'
+        + '<div class="cat">'+esc(c.en)+' · '+esc(c.or)+'</div>'
+        + '<div class="price">'+inr(p.price)+(d?'<s>'+inr(p.mrp)+'</s><em>'+d+'% off</em>':'')+'</div>'
+        + '<div class="meta">Colour / ରଙ୍ଗ: '+esc(p.colors.join(", "))+'</div>'
+        + '<div class="meta">Size / ସାଇଜ୍:</div><div class="dots">'+p.sizes.map(function(s){return '<span class="tag">'+s+'</span>'}).join("")+'</div>'
+        + '<a class="wa" target="_blank" rel="noopener" href="'+waBase+'?text='+encodeURIComponent(msg)+'">💬 Enquire on WhatsApp<small>WhatsApp ରେ ପଚାରନ୍ତୁ</small></a>'
+        + '</div></article>';
+    }).join("");
+  }
+
+  ["q","fColor","fSize","fPrice","fSort"].forEach(function(id){
+    $(id).addEventListener(id==="q"?"input":"change",render);
+  });
+  renderCats(); render();
+})();
+</script>
+</body>
+</html>
